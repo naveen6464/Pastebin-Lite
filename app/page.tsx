@@ -144,12 +144,12 @@ export default function HomePage() {
             </p>
             <div className="flex gap-2">
               <input
-                value={resultUrl}
+                value={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${resultUrl}`}
                 readOnly
                 className="flex-1 border rounded px-2 py-1 text-sm"
               />
               <button
-                onClick={() => navigator.clipboard.writeText(resultUrl)}
+                onClick={() => navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_WEBSITE_URL}${resultUrl}`)}
                 className="bg-green-600 text-white px-3 rounded"
               >
                 Copy
